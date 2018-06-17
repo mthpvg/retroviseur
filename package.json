@@ -1,0 +1,28 @@
+{
+  "name": "retroviseur",
+  "version": "1.0.0",
+  "bin": {
+    "retroviseur": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mthpvg/retroviseur.git"
+  },
+  "author": "mthpvg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mthpvg/retroviseur/issues"
+  },
+  "homepage": "https://github.com/mthpvg/retroviseur#readme",
+  "dependencies": {
+    "json5": "^1.0.1",
+    "moment": "^2.22.1",
+    "semver": "^5.5.0"
+  }
+}
