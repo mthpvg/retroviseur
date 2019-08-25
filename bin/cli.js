@@ -18,17 +18,17 @@ if (!['d', 'w'].includes(unit)) return help()
 let packageFile
 try {
   packageFile = fs.readFileSync('./package.json', 'utf8')
-} catch (err) {
+} catch (error) {
   console.error('👻 --> There is no package.json.')
-  throw(err)
+  throw(error)
 }
 
 let packageJson
 try {
   packageJson = JSON.parse(packageFile)
-} catch (err) {
-  console.error(`👻 --> The package.json is invalid: ${err.message}`)
-  throw(err)
+} catch (error) {
+  console.error(`👻 --> The package.json is invalid: ${error.message}`)
+  throw(error)
 }
 
 const dependencies = packageJson.dependencies
@@ -37,8 +37,8 @@ console.log(`Releases in the last ${count} ${timeDictionary[unit]}:`)
 
 Object.keys(dependencies)
     .forEach((depName) => {
-      npmView(depName, function (err, result) {
-        if (err) throw(err)
+      npmView(depName, (error, result) => {
+        if (error) throw(error)
         const validVersions = Object.keys(result).map((version) => {
           const date = result[version]
           return {version, date, fromNow: moment(date).fromNow()}
@@ -47,12 +47,12 @@ Object.keys(dependencies)
       let isValid = false
       try {
         isValid = semver.satisfies(elt.version, dependencies[depName])
-      } catch (err) {
+      } catch (error) {
         console.error(` 💥  ${depName}@${dependencies[depName]} a release has an invalid semver ${elt.version}`)
       }
       return isValid
     })
-    .filter(function (elt) {
+    .filter((elt) => {
       return moment(elt.date).diff(moment().subtract(count, unit)) > 0
     })
     const finalResult = validVersions.map((elt) => {

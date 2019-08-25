@@ -1,7 +1,7 @@
 {
   "name": "retroviseur",
   "description": "Find suspicious packages that could have broke your build",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "retroviseur": "./bin/cli.js"
   },
