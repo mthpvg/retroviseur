@@ -1,11 +1,13 @@
 {
   "name": "retroviseur",
-  "version": "1.0.0",
+  "description": "Find suspicious packages that could have broke your build",
+  "version": "1.0.1",
   "bin": {
     "retroviseur": "./bin/cli.js"
   },
   "engines": {
-    "node": ">=8.9.4"
+    "node" : ">=8.12.0",
+    "npm" : ">=6.5.0"
   },
   "scripts": {
     "start": "node ./bin/cli.js"
@@ -16,6 +18,10 @@
   },
   "author": "mthpvg",
   "license": "MIT",
+  "keywords": [
+    "packagejson",
+    "semver"
+  ],
   "bugs": {
     "url": "https://github.com/mthpvg/retroviseur/issues"
   },

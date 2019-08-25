@@ -18,3 +18,6 @@ retroviseur 4 d
 # New releases of the last 8 weeks
 retroviseur 8 w
 ```
+
+## TODO
+- Remove invalid semver if the release is old
