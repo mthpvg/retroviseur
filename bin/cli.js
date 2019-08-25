@@ -5,9 +5,9 @@ const semver = require('semver')
 const moment = require('moment')
 const npmView = require('./lib/npm_view')
 const help = require('./lib/help')
-const hasNoNewReleases = true
+let hasNoNewReleases = true
 
-const timeDictionary = {d: 'days', w: 'weeks' }
+const timeDictionary = {d: 'days', w: 'weeks'}
 
 const count = parseInt(process.argv[2] || '2')
 const unit = process.argv[3] || 'w'
