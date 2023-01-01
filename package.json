@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/mthpvg/retroviseur#readme",
   "dependencies": {
-    "json5": "^1.0.1",
+    "json5": "^2.2.2",
     "moment": "^2.22.1",
     "semver": "^5.5.0"
   }
